@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "379434672761",
+    "firebase_url": "https://uniqlo-8aea3-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "uniqlo-8aea3",
+    "storage_bucket": "uniqlo-8aea3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379434672761:android:fb6422d1d1cbeae9f86aa8",
+        "android_client_info": {
+          "package_name": "com.example.uniqlo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC843ppOXdJFqxT8-w16bPjpGIAWCr2f9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notification">
+
+    <FrameLayout
+        android:id="@+id/topBarContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Notification Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_10ssp"
+            android:text="Notification"
+            android:textColor="@color/black"
+            android:padding="@dimen/_12ssp"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ImageView
+        android:id="@+id/notificationIcon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_100sdp"
+        android:contentDescription="Cart Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_notification"
+        app:tint="@color/black" />
+
+    <!-- Heart Icon -->
+    <ImageView
+        android:id="@+id/heartIcon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:contentDescription="Heart Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_heart"
+        app:tint="@color/black" />
+
+    <!-- Notification Icon -->
+
+    <ImageView
+        android:id="@+id/cartIcon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:contentDescription="Notification Icon"
+        android:scaleType="centerInside"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:src="@drawable/ic_cart_nonfilled"
+        app:tint="@color/black" />
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/circle"
+        android:contentDescription="Home Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_120sdp"
+        android:background="@drawable/circle"
+        android:contentDescription="Search Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953"
+        app:tint="@color/black" />
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:background="@drawable/circle"
+        android:contentDescription="Profile Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_profile2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
+
+
+    <FrameLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="434dp"
+        android:background="#FDF6FE"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/searchIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBarContainer">
+
+        <!-- Messages Tab -->
+        <LinearLayout
+            android:id="@+id/messagesTab"
+            android:layout_width="201dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/corner_shape"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/messagesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25ssp"
+                android:text="Messages"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold" />
+
+            <!-- Black underline -->
+            <View
+                android:id="@+id/messagesUnderline"
+                android:layout_width="201dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="#000000"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!-- News Tab -->
+        <LinearLayout
+            android:id="@+id/newsTab"
+            android:layout_width="@dimen/_171sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_150sdp"
+            android:layout_weight="1"
+            android:background="@drawable/corner_shape"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- News Text -->
+                <TextView
+                    android:id="@+id/newsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25ssp"
+                    android:text="News"
+                    android:textColor="#2C2B2B"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <!-- Red Notification Dot -->
+                <View
+                    android:id="@+id/notificationDot"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="-8dp"
+                    android:background="@drawable/notif_red_dot" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

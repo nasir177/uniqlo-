@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The bar background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#CCCCCC" /> <!-- Light gray color -->
+            <size android:width="2dp" /> <!-- Thin vertical bar -->
+        </shape>
+    </item>
+
+    <!-- Add dots overlay -->
+    <item>
+        <shape android:shape="rectangle">
+            <size android:width="2dp" />
+            <stroke android:width="2dp" android:color="#000000" /> <!-- Black color -->
+        </shape>
+    </item>
+</layer-list>

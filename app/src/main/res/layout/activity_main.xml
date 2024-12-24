@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/winterclothes1" />
+
+    <!-- Top Category Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Category Buttons -->
+        <TextView
+            android:id="@+id/womenCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_50ssp"
+            android:padding="@dimen/_8ssp"
+            android:text="WOMEN"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/menCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="MEN"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kidsCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40ssp"
+            android:layout_marginTop="@dimen/_50ssp"
+            android:padding="@dimen/_8ssp"
+            android:text="KIDS"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/babyCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30ssp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="BABY"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/topBarContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="20dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- notification Icon -->
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_100sdp"
+            android:contentDescription="Cart Icon"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_notification_none"
+            app:tint="@android:color/white" />
+
+        <!-- Heart Icon -->
+        <ImageView
+            android:id="@+id/WishListIcon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:contentDescription="Heart Icon"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_heart"
+            app:tint="@android:color/white" />
+
+        <!-- cart Icon -->
+
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:contentDescription="Notification Icon"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_cart_nonfilled"
+            app:tint="@android:color/white" />
+
+    </FrameLayout>
+
+    <!-- Scrollable Content -->
+
+    <!-- Custom Scroll Indicator -->
+
+    <!-- Bottom Navigation -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layerType="none"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <LinearLayout
+        android:id="@+id/scrollIndicator"
+        android:layout_width="14dp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintVertical_bias="0.384">
+
+        <!-- Top black indicator -->
+        <View
+            android:id="@+id/blackLine"
+            android:layout_width="@dimen/_6sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_gravity="center"
+            android:background="#000" />
+
+        <!-- Scroll dots -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Repeated dots -->
+            <ImageView
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:src="@drawable/scroll_dot" />
+
+            <ImageView
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:src="@drawable/scroll_dot" />
+
+            <ImageView
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:src="@drawable/scroll_dot" />
+
+            <!-- Add as many dots as needed -->
+
+            <!-- Adding dots -->
+            <ImageView
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:src="@drawable/scroll_dot" />
+
+            <ImageView
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:src="@drawable/scroll_dot" />
+
+
+            <ImageView
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:src="@drawable/scroll_dot" />
+
+            <ImageView
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:src="@drawable/scroll_dot" />
+
+            <ImageView
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:src="@drawable/scroll_dot" />
+
+            <ImageView
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:src="@drawable/scroll_dot"
+                tools:layout_editor_absoluteX="393dp"
+                tools:layout_editor_absoluteY="281dp" />
+
+            <!-- Add more dots as needed -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </LinearLayout>
+
+    <!-- Home Icon -->
+
+    <!-- Search Icon -->
+
+    <!-- Profile Icon -->
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:background="@drawable/circle"
+        android:contentDescription="Home Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_120sdp"
+        android:background="@drawable/circle"
+        android:contentDescription="Search Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953"
+        app:tint="@color/black" />
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:background="@drawable/circle"
+        android:contentDescription="Profile Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_profile2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

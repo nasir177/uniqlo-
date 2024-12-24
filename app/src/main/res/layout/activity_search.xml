@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#FEFEFE"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search">
+
+    <!-- Top Category Bar -->
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:background="@drawable/corner_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Category Buttons -->
+        <TextView
+            android:id="@+id/womenCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="WOMEN"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/menCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30ssp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="MEN"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kidsCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="KIDS"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/babyCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:padding="8dp"
+            android:text="BABY"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/topBarContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:background="@drawable/corner_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Cart Icon -->
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_100sdp"
+            android:contentDescription="Cart Icon"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_notification_none"
+            app:tint="@color/black" />
+
+        <!-- Heart Icon -->
+        <ImageView
+            android:id="@+id/heartIcon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:contentDescription="Heart Icon"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_heart"
+            app:tint="@color/black" />
+
+        <!-- Notification Icon -->
+
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:contentDescription="Notification Icon"
+            android:scaleType="centerInside"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:src="@drawable/ic_cart_nonfilled"
+            app:tint="@color/black" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="408dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="@dimen/_341sdp"
+        android:background="@drawable/navigation_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:background="@drawable/circle"
+        android:contentDescription="Home Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <ImageView
+        android:id="@+id/closeIcon"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_120sdp"
+        android:background="@drawable/circleblack"
+        android:contentDescription="cancelIcon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_close"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/circle"
+        android:contentDescription="Profile Icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_profile2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="56dp"
+        android:background="@drawable/vertical_shape"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search by Keyword"
+        app:layout_constraintBottom_toTopOf="@+id/closeIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollableContent"
+        android:layout_width="match_parent"
+        android:layout_height="365dp"
+        android:layout_marginTop="40dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBarContainer"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- FrameLayout for Search Categories -->
+        <FrameLayout
+            android:id="@+id/searchCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BarCodeContainer">
+
+            <!-- GridLayout inside FrameLayout -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:rowCount="23"
+                tools:ignore="HardcodedText">
+
+                <!-- Example of a Reusable Item Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/outerwear" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/sweaters" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Sweaters \n&amp;cardigans"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/tshirt" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="T-shirts, Sweats &amp; Fleece"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/shirt" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Shirt &amp;Polo"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/bottom" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/sportsutilitywear" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/innerwear" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/loungewear" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/accessories" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/uvlogo" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/airisminnerwear" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/ut" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/peaceforall" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/heattech" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/collab" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/gift" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/sale" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/limitedoffer" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/newarrival" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Example of Another Item Layout -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/extrasize" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/navigation_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:contentDescription="Profile Icon"
+                        android:src="@drawable/comingsoon" />
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:text="Outerwear"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </GridLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
